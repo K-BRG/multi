@@ -9,10 +9,10 @@ html, body {
 body {
     margin: 0;
     display: grid;
-    grid-template-columns: 30% 40% auto;
+    grid-template-columns: 30% 40% 30%;
     grid-template-rows:  auto;
     grid-template-areas:
-        "text   image  empty";
+        "gallery image text";
 }
 
 #header .info {
@@ -34,6 +34,33 @@ body {
     cursor: pointer;
     opacity: 0.8;
 }
+
+
+
+
+/*gallery grid*/
+#gallery .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+#gallery .column {
+    flex: 25%;
+    max-width: 50%;
+    padding: 0 10px;
+    padding-top: 80px;
+  }
+  
+#gallery .column img {
+    margin-top: 20px;
+    vertical-align: middle;
+    width: 100%;
+    cursor: pointer;
+    transition: transform .5s;
+    opacity: 0.2;
+  }
 
 #image img {
     width: 100%;
@@ -76,10 +103,10 @@ body {
     display: block;
     cursor: pointer;
     padding: 0px 0px 10px 0px;
-    margin-left: 60%;
+    margin-left: 18px;
     text-align: left;
     transition: transform .5s;
-    animation: fadein 4s;
+    animation: fadein 3s;
     opacity: 0.5;
     
 }
@@ -87,23 +114,20 @@ body {
 #image {
     grid-area: image;
     background-color: rgb(0, 0, 0);
-    padding-top: 100px;
+    padding-top: 90px;
 }
 
-#empty {
-    grid-area: empty;
+#gallery {
+    grid-area: gallery;
     background-color: rgb(0, 0, 0);
     padding: 0px;
     margin: 0px;
-    
 }
 
+
 /*fade in animation*/
-
-
 @keyframes fadein {
     0%   {opacity: 0;}
-    50%  {opacity: 0;}
     100% {opacity: 0.5;}
 }
 
@@ -118,20 +142,27 @@ body {
 
 /* hover effect */
 
+
+#gallery .column img:hover {
+    opacity: 1;
+    }
+
+/*
 #image video:hover {
     transform: scale(1.02);
-  }
+    }
 
 #image img:hover {
     transform: scale(1.02);
     }
+*/
 
 #text li:hover {
-    opacity: 1; 
+    opacity: 1;
     }
 
 
-    /* setup tooltips */
+/* setup tooltips */
 .tooltip {
     position: relative;
   }
@@ -152,10 +183,11 @@ body {
     left: 20px;
     width: 0;
   }
+
   .tooltip:before {
     background: rgba(20, 20, 20, 0.75);
     border-radius: 0px;
-    color: rgb(199, 199, 199);
+    color: rgb(255, 71, 71);
     content: attr(data-title);
     font-size: 14px;
     padding: 15px 15px;
