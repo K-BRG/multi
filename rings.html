@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>multimedia</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/rings.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script>
+            AOS.init();
+        </script>
+    </head>
+    <body>
+        <header id="header">
+            <img class="info" src="images/info.svg">
+            <img class="menu" src="images/hamburger.svg">
+        </header>
+
+        <!--galeria zdjec-->
+        <section id="gallery">
+            <div class="row">
+                <div class="column">
+                    <a href="index.html"><img id="bokeh" src="images/bokeh-s.jpg"></a>
+                    <a href="led.html"><img id="led" src="images/led-s.jpg"></a>
+                    <a href="rings.html"><img id="rings" src="images/rings-s.jpg"></a>
+                </div>
+                <div class="column">
+                    <a href="face.html"><img id="face" src="images/face-s.jpg"></a>
+                    <a href="tunnel.html"><img id="tunnel" src="images/tunnel-s.jpg"></a>
+                    <a href="wing.html"><img id="wing" src="images/wing-s.jpg"></a>
+                </div>
+            </div>
+        </section>
+
+        <!--seria zdjec-->
+        <section id="image"> 
+                <video autoplay loop><source src="images/rings.mp4" type="video/mp4"></video> 
+                <img src="images/rings-colors.png">
+                <img src="images/rings-s.jpg">
+        </section>
+
+        <!--slowa-->
+        <section id="text">
+            <ul>
+                <li class="tooltip fade" data-title="96%">coil spring</li>
+                <li class="tooltip fade" data-title="93%">light</li>
+                <li class="tooltip fade" data-title="81%">lighting</li>
+                <li class="tooltip fade" data-title="71%">spiral</li>
+                <li class="tooltip fade" data-title="69%">font</li>
+                <li class="tooltip fade" data-title="60%">night</li>
+        </section>
+    </body>
+</html>
