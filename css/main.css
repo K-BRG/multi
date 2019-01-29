@@ -9,7 +9,7 @@ html, body {
 body {
     margin: 0;
     display: grid;
-    grid-template-columns: 30% 45% auto;
+    grid-template-columns: 30% 40% auto;
     grid-template-rows:  100vh;
     grid-template-areas:
         "gallery image text";
@@ -54,7 +54,7 @@ body {
   }
   
 #gallery .column img {
-    margin-top: 0px;
+    margin-top: 20px;
     vertical-align: middle;
     width: 100%;
     cursor: pointer;
@@ -123,7 +123,7 @@ body {
     grid-area: gallery;
     background-color: rgb(0, 0, 0);
     padding: 0px;
-    margin: 0px;
+    margin: -20px 0px 0px 0px;
 }
 
 
